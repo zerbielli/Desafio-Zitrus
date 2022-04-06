@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface IAutorizacoesRepo extends JpaRepository<Autorizacoes, Long> {
 
-    public default List<Autorizacoes> findAllOrderId() {
+    default List<Autorizacoes> findAllOrderId() {
         return this.findAll(Sort.by(Sort.Order.desc("id")));
     }
 

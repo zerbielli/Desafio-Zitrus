@@ -14,9 +14,7 @@
             <column name="id_procedimento" type="INT">
                 <constraints nullable="false" foreignKeyName="fk_procedimentos" references="procedimentos(id)"/>
             </column>
-            <column name="idade" type="int">
-                <constraints nullable="false"/>
-            </column>
+            <column name="idade" type="int"/>
             <column name="sexo" type="char"/>
         </createTable>
         <rollback>

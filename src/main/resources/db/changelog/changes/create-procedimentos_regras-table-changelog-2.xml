@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="admin" id="2">
+        <createTable tableName="procedimentos_regras">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="id_procedimento" type="INT">
+                <constraints nullable="false" foreignKeyName="fk_procedimentos" references="procedimentos(id)"/>
+            </column>
+            <column name="idade" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sexo" type="char"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="procedimentos"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

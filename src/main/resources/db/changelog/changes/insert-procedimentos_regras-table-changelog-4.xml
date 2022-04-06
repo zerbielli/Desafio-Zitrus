@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="admin" id="4">
+        <insert tableName="procedimentos_regras">
+            <column name="id_procedimento" valueComputed="(SELECT ID FROM procedimentos WHERE nome = '1234')"/>
+            <column name="idade" value="20"/>
+            <column name="sexo" value="M"/>
+        </insert>
+
+        <insert tableName="procedimentos_regras">
+            <column name="id_procedimento" valueComputed="(SELECT ID FROM procedimentos WHERE nome = '4567')"/>
+            <column name="idade" value="20"/>
+            <column name="sexo" value="M"/>
+        </insert>
+
+        <insert tableName="procedimentos_regras">
+            <column name="id_procedimento" valueComputed="(SELECT ID FROM procedimentos WHERE nome = '4567')"/>
+            <column name="idade" value="30"/>
+            <column name="sexo" value="F"/>
+        </insert>
+
+        <insert tableName="procedimentos_regras">
+            <column name="id_procedimento" valueComputed="(SELECT ID FROM procedimentos WHERE nome = '6789')"/>
+            <column name="idade" value="10"/>
+            <column name="sexo" value="M"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

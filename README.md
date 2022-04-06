@@ -37,7 +37,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - `Autorizar`: Tela para cadastro de Autorizações seguido de listagem dos regstros criados.
 - `Autorizações` : Listagem de autorizações.
 
-##Lógica de autorização
+## Lógica de autorização
 
 As autorizações são aplicadas da seguinte forma:<p>
 A tabela de `PROCEDIMENTOS` contém a lista de procedimentos não repetidos que serve para popular o dropDown de escolha do procedimento a ser autorizado.
@@ -65,7 +65,7 @@ $ mvn package
 
 $ java -jar target/DesafioZitrus-0.0.1-SNAPSHOT.jar
 ```
-####Acessar sistema em http://localhost:8080/
-####Acessar banco H2 em http://localhost:8080/h2
+#### Acessar sistema em http://localhost:8080/
+#### Acessar banco H2 em http://localhost:8080/h2
 - ``JDBC URL: jdbc:h2:mem:desafio``
 - ``User Name: sa``
